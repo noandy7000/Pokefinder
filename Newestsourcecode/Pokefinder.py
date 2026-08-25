@@ -37,15 +37,8 @@ class GUI:
         self.window.config(menu=self.menubar)
         ## Creating the Columns for the Buttons of the Main Window
         self.frame = tk.Frame(self.window)
-        self.frame.columnconfigure(0, weight=1)
-        self.frame.columnconfigure(1, weight=1)
-        self.frame.columnconfigure(2, weight=1)
-        self.frame.columnconfigure(3, weight=1)
-        self.frame.columnconfigure(4, weight=1)
-        self.frame.columnconfigure(5, weight=1)
-        self.frame.columnconfigure(6, weight=1)
-        self.frame.columnconfigure(7, weight=1)
-        self.frame.columnconfigure(8, weight=1)   
+        for i in range(8):
+            self.frame.columnconfigure(i, weight=1)
         ## Creating the Main Menu Buttons
         button1 = tk.Button(self.frame, text="1. Find the page of an Index Number",
                              font=((FONT), 18), command=self.inputwindowconfig)
